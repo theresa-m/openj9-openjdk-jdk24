@@ -35,7 +35,6 @@
  * @run main RedefineClassHelper
  * @run main/othervm/timeout=180
  *         -javaagent:redefineagent.jar
- *         -Xlog:class+init,exceptions
  *         RedefineVerifyError
  */
 

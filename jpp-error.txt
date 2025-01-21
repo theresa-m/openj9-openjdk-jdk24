@@ -1,0 +1,7 @@
+malformed expression [/Users/theresamammarella/openj9builds/openj9-openjdk-jdk24/openj9/jcl/src/java.management/share/classes/com/ibm/java/lang/management/internal/ManagementPermissionHelper.java, line 1, column 11]
+malformed expression [/Users/theresamammarella/openj9builds/openj9-openjdk-jdk24/openj9/jcl/src/openj9.criu/share/classes/org/eclipse/openj9/criu/CRIUDumpPermission.java, line 1, column 14]
+malformed expression [/Users/theresamammarella/openj9builds/openj9-openjdk-jdk24/openj9/jcl/src/java.base/share/classes/openj9/internal/criu/CRIUDumpPermission.java, line 1, column 14]
+malformed expression [/Users/theresamammarella/openj9builds/openj9-openjdk-jdk24/openj9/jcl/src/openj9.criu/share/classes/org/eclipse/openj9/criu/CRIUDumpPermission.java, line 1, column 14]
+malformed expression [/Users/theresamammarella/openj9builds/openj9-openjdk-jdk24/openj9/jcl/src/java.base/share/classes/openj9/internal/criu/CRIUDumpPermission.java, line 1, column 14]
+Bogus command -- "END" [/Users/theresamammarella/openj9builds/openj9-openjdk-jdk24/openj9/jcl/src/openj9.sharedclasses/share/classes/com/ibm/oti/shared/SharedClassTokenHelperImpl.java, line 46]
+malformed expression [/Users/theresamammarella/openj9builds/openj9-openjdk-jdk24/openj9/jcl/src/java.base/share/classes/java/lang/Class.java, line 67, column 27]
