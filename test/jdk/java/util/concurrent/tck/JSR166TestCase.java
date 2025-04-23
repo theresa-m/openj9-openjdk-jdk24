@@ -352,6 +352,7 @@ public class JSR166TestCase extends TestCase {
 //                     System.err.println("availableProcessors=" +
 //                         Runtime.getRuntime().availableProcessors());
 //                     System.err.printf("cpu model = %s%n", cpuModel());
+                    com.ibm.jvm.Dump.SystemDump();
                     dumpTestThreads();
                     // one stack dump is probably enough; more would be spam
                     break;
