@@ -324,6 +324,7 @@ public class ObjectMonitorUsage {
     }
 
     public static void main(String args[]) {
+        try {
         log("\n### main: started\n");
         check(lockCheck, null, 0, 0, 0);
 
@@ -335,6 +336,9 @@ public class ObjectMonitorUsage {
             throw new RuntimeException("Failed status returned from the agent");
         }
         log("\n### main: finished\n");
+        } catch(Throwable e) {
+            com.ibm.jvm.Dump.SystemDump();
+        }
     }
 
     static abstract class TestTask implements Runnable {
