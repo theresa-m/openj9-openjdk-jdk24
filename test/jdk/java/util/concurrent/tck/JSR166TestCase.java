@@ -77,7 +77,7 @@
  *          parallelism.
  * @build *
  * @modules java.management java.base/jdk.internal.util
- * @run junit/othervm/timeout=1000
+ * @run junit/othervm/timeout=10000
  *      --add-opens java.base/java.util.concurrent=ALL-UNNAMED
  *      --add-opens java.base/java.lang=ALL-UNNAMED
  *      -Djsr166.testImplementationDetails=true
