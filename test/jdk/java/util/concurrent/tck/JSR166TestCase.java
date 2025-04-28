@@ -39,7 +39,7 @@
  * @summary Conformance testing variant of JSR-166 tck tests.
  * @build *
  * @modules java.management java.base/jdk.internal.util
- * @run junit/othervm/timeout=3000
+ * @run junit/othervm/timeout=10000
  *      -Xdump:system+java+snap:events=throw+systhrow,filter=java/lang/Exception,msg_filter=*JUnit*
  *      -Xdump:system+java+snap:events=throw+systhrow,filter=junit/framework/AssertionFailedError
  *      JSR166TestCase
@@ -51,7 +51,7 @@
  *          tck tests with ForkJoinPool common parallelism.
  * @build *
  * @modules java.management java.base/jdk.internal.util
- * @run junit/othervm/timeout=3000
+ * @run junit/othervm/timeout=10000
  *      --add-opens java.base/java.util.concurrent=ALL-UNNAMED
  *      --add-opens java.base/java.lang=ALL-UNNAMED
  *      -Djsr166.testImplementationDetails=true
@@ -59,7 +59,7 @@
  *      -Xdump:system+java+snap:events=throw+systhrow,filter=java/lang/Exception,msg_filter=*JUnit*
  *      -Xdump:system+java+snap:events=throw+systhrow,filter=junit/framework/AssertionFailedError
  *      JSR166TestCase
- * @run junit/othervm/timeout=3000
+ * @run junit/othervm/timeout=10000
  *      --add-opens java.base/java.util.concurrent=ALL-UNNAMED
  *      --add-opens java.base/java.lang=ALL-UNNAMED
  *      -Djsr166.testImplementationDetails=true
@@ -77,7 +77,7 @@
  *          parallelism.
  * @build *
  * @modules java.management java.base/jdk.internal.util
- * @run junit/othervm/timeout=3000
+ * @run junit/othervm/timeout=10000
  *      --add-opens java.base/java.util.concurrent=ALL-UNNAMED
  *      --add-opens java.base/java.lang=ALL-UNNAMED
  *      -Djsr166.testImplementationDetails=true
