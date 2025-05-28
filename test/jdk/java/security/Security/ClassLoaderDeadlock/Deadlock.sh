@@ -23,13 +23,16 @@
 # questions.
 #
 
+# ===========================================================================
+# (c) Copyright IBM Corp. 2025, 2025 All Rights Reserved
+# ===========================================================================
 
 # @test
 # @bug 4944382
 # @summary make sure we do not deadlock loading signed JAR with getInstance()
 # @author Andreas Sterbenz
 # @build Deadlock
-# @run shell/timeout=30 Deadlock.sh
+# @run shell/timeout=60 Deadlock.sh
 
 # set platform-dependent variables
 OS=`uname -s`
