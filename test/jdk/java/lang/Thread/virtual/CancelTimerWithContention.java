@@ -54,6 +54,7 @@ public class CancelTimerWithContention {
         for (int threadCount = MIN_THREADS; threadCount <= MAX_THREADS; threadCount += 100) {
             System.out.format("%s #threads = %d%n", Instant.now(), threadCount);
             for (int lockCount = MIN_MONITORS; lockCount <= MAX_MONITORS;  lockCount += 2) {
+                System.out.format("%s #monitors = %d%n", Instant.now(), lockCount);
                 test(threadCount, lockCount);
             }
         }
