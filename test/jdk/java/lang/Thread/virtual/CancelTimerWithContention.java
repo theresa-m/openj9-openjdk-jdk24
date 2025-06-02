@@ -80,13 +80,16 @@ public class CancelTimerWithContention {
 
                 executor.submit(() -> {
                     synchronized (lock) {
+                        System.out.println("Wait on " + lock);
                         lock.wait(Long.MAX_VALUE);
+                        System.out.println("Resume " + lock);
                     }
                     finished.incrementAndGet();
                     return null;
                 });
 
                 synchronized (lock) {
+                    System.out.println("Notify " + lock);
                     lock.notify();
                 }
             }
@@ -95,6 +98,7 @@ public class CancelTimerWithContention {
             while (finished.get() < threadCount) {
                 for (Object lock : locks) {
                     synchronized (lock) {
+                        // Don't add prints here yet - there will be a lot
                         lock.notify();
                     }
                 }
