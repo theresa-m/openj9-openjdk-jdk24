@@ -80,16 +80,16 @@ public class CancelTimerWithContention {
 
                 executor.submit(() -> {
                     synchronized (lock) {
-                        System.out.println("Wait on " + lock);
+                        //System.out.println("Wait on " + lock);
                         lock.wait(Long.MAX_VALUE);
-                        System.out.println("Resume " + lock);
+                        //System.out.println("Resume " + lock);
                     }
                     finished.incrementAndGet();
                     return null;
                 });
 
                 synchronized (lock) {
-                    System.out.println("Notify " + lock);
+                    //System.out.println("Notify " + lock);
                     lock.notify();
                 }
             }
