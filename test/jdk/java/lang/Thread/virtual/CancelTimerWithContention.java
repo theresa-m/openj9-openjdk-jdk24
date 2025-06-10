@@ -28,6 +28,7 @@
  * @requires vm.continuations
  * @key randomness
  * @run main/othervm
+ *     -Xint
  *     -Djdk.virtualThreadScheduler.parallelism=2
  *     -Djdk.virtualThreadScheduler.timerQueues=1
  *     CancelTimerWithContention
