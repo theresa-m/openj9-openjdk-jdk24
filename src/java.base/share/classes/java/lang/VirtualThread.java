@@ -631,6 +631,7 @@ final class VirtualThread extends BaseVirtualThread {
                     byte seqNo = ++timedWaitSeqNo;
                     timeoutTask = schedule(() -> waitTimeoutExpired(seqNo), timeout, MILLISECONDS);
                     setState(newState = TIMED_WAIT);
+                    java.lang.J9VMInternals.dumpString("18 " + this);
                 }
             }
 
