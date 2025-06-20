@@ -92,11 +92,11 @@ public class CancelTimerWithContention {
 
             // notify at most one thread until all threads are finished
             int tempCount = 0;
-            if ((tempCount % 100) == 0) {
-                System.out.println("stuck on: " + finished.get() + " " + tempCount);
-            }
             while (finished.get() < threadCount) {
                 tempCount++;
+                if ((tempCount % 100) == 0) {
+                    System.out.println("stuck on: " + finished.get() + " " + tempCount);
+                }
                 for (Object lock : locks) {
                     synchronized (lock) {
                         lock.notify();
