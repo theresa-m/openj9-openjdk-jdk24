@@ -27,7 +27,7 @@
  * @summary Test JVMTI Monitor functions for virtual threads
  * @requires vm.continuations
  * @compile VThreadMonitorTest.java
- * @run main/othervm/native -agentlib:VThreadMonitorTest VThreadMonitorTest
+ * @run main/othervm/native -Xint -Xdump:system:events=throw,filter=java/lang/RuntimeException,request=exclusive+compact+prepwalk -agentlib:VThreadMonitorTest VThreadMonitorTest
  */
 
 import java.io.PrintStream;
@@ -143,7 +143,11 @@ public class VThreadMonitorTest {
             }
             // One of the VT threads is blocked at lock0, another - at lock2.
             for (int i = 0; i < VT_COUNT; i++) {
+                //log("Debug: " + vthreads[i] + " " + lock0 + " " + lock2);
                 checkContendedMonitor(vthreads[i], lock0, lock2);
+                if (check() != 0) {
+                    throw new RuntimeException("DEBUG EXCEPTION");
+                }
             }
             // SLEEPING_VT threads can be contended on some system  monitors,
             // so we should not check they have no contention.
