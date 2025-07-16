@@ -34,6 +34,7 @@ endef
 
 OPENJ9_TOPDIR           := @OPENJ9_TOPDIR@
 OPENJ9OMR_TOPDIR        := @OPENJ9OMR_TOPDIR@
+VENDOR_TOPDIR           := @VENDOR_TOPDIR@
 
 # compiler overrides
 OPENJ9_CC               := @OPENJ9_CC@
@@ -80,7 +81,7 @@ OPENJ9_ENABLE_JITSERVER              := @OPENJ9_ENABLE_JITSERVER@
 OPENJ9_ENABLE_SNAPSHOTS              := @OPENJ9_ENABLE_SNAPSHOTS@
 
 # for constructing version output
-COMPILER_VERSION_STRING := @COMPILER_VERSION_STRING@
+CXX_VERSION_STRING := @CXX_VERSION_STRING@
 
 include $(TOPDIR)/closed/openjdk-tag.gmk
 
