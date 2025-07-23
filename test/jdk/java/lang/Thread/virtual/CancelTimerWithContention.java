@@ -30,6 +30,7 @@
  * @run main/othervm
  *     -Djdk.virtualThreadScheduler.parallelism=2
  *     -Djdk.virtualThreadScheduler.timerQueues=1
+ *     -Xjit:disableLocalCSE  -Xjit:disableDynamicLoopTransfer -XX:+MergeCompilerOptions
  *     CancelTimerWithContention
  */
 
